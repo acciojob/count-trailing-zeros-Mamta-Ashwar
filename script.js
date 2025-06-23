@@ -6,12 +6,14 @@ function trailingZeros(n) {
   return count;
 }
 
-const input = prompt("Enter a non-negative integer up to 10000:");
-const num = Number(input);
+document.getElementById('calculateBtn').addEventListener('click', () => {
+  const input = prompt("Enter a non-negative integer up to 10000:");
+  const num = Number(input);
 
-if (Number.isInteger(num) && num >= 0 && num <= 10000) {
-  const zeros = trailingZeros(num);
-  alert(`Trailing zeros in ${num}! is: ${zeros}`);
-} else {
-  alert("Invalid input! Please enter a non-negative integer up to 10000.");
-}
+  if (Number.isInteger(num) && num >= 0 && num <= 10000) {
+    const zeros = trailingZeros(num);
+    alert(`Number of trailing zeros in ${num}! is: ${zeros}`);
+  } else {
+    alert("Invalid input! Please enter a non-negative integer up to 10000.");
+  }
+});
